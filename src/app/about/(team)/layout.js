@@ -20,7 +20,7 @@ export default function AboutLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`} style={{ border: '2px solid #0070f3', padding: '20px' }}>
-        <p>This layout only will see on the about.</p>
+        <p>This layout only will see on the TeamDelhi.</p>
         {children}
       </body>
     </html>
