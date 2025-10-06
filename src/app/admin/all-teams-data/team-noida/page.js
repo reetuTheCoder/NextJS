@@ -1,5 +1,6 @@
 import React from "react";
 
+// task is header and footer should not show here
 const TeamNoida = () => {
    console.log("noida team re-render");
   return (
