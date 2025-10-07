@@ -1,11 +1,11 @@
-import React from "react";
-import { products } from "./products";
+// src/app/shop/page.js
+import { shopCategories } from "./shopCategories";
 import Link from "next/link";
 
-const ShopPage = () => {
+export default function ShopPage() {
   return (
     <div style={{ padding: "30px" }}>
-      <h1>Shop All Products</h1>
+      <h1>Shop Categories</h1>
       <div
         style={{
           display: "grid",
@@ -14,34 +14,26 @@ const ShopPage = () => {
           marginTop: "20px",
         }}
       >
-        {products.map((product) => (
+        {shopCategories.map((category) => (
           <Link
-            key={product.id}
-        href={{
-              pathname: `/shop/${product.category}/${product.subcategory}/${product.id}`,
-              query: { color: "space-gray", ram: "32gb" }, // add query params here
-            }}
+            key={category.id}
+            href={`/shop/${category.id}`}
             style={{
               textDecoration: "none",
               color: "inherit",
               border: "1px solid #ddd",
               borderRadius: "10px",
               padding: "15px",
-              transition: "0.3s",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100px",
             }}
           >
-            <img
-              src={product.image}
-              alt={product.name}
-              style={{ width: "100%", borderRadius: "10px" }}
-            />
-            <h3>{product.name}</h3>
-            <p>${product.price}</p>
+            <h2>{category.name}</h2>
           </Link>
         ))}
       </div>
     </div>
   );
-};
-
-export default ShopPage;
+}
