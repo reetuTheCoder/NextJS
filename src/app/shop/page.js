@@ -17,7 +17,10 @@ const ShopPage = () => {
         {products.map((product) => (
           <Link
             key={product.id}
-            href={`/shop/${product.category}/${product.subcategory}/${product.id}`}
+        href={{
+              pathname: `/shop/${product.category}/${product.subcategory}/${product.id}`,
+              query: { color: "space-gray", ram: "32gb" }, // add query params here
+            }}
             style={{
               textDecoration: "none",
               color: "inherit",

@@ -1,10 +1,16 @@
+"use client";
+
 import React from "react";
-import { products } from "../../../products";
+import { useSearchParams } from "next/navigation";
+import { products } from "../../../products"; 
 
 const ProductPage = ({ params }) => {
-  console.log("params", params);
+  const resolvedParams = React.use(params);
+  const { category, subcategory, productId } = resolvedParams;
 
-  const { category, subcategory, productId } = params;
+  const searchParams = useSearchParams();
+  const color = searchParams.get("color");
+  const ram = searchParams.get("ram");
 
   const product = products.find(
     (p) =>
@@ -13,21 +19,21 @@ const ProductPage = ({ params }) => {
       p.id === productId
   );
 
-  if (!product) {
-    return <div>Product not found!</div>;
-  }
+  if (!product) return <div>Product not found!</div>;
 
   return (
-    <div>
-      <div>
+    <div style={{ padding: "30px" }}>
+      <div style={{ marginBottom: "15px" }}>
         Shop → {category} → {subcategory} → {productId}
       </div>
+
       <h1>{product.name}</h1>
       <img
         src={product.image}
         alt={product.name}
         style={{ width: "400px", borderRadius: "10px" }}
       />
+
       <p>
         <strong>Brand:</strong> {product.brand}
       </p>
@@ -35,6 +41,17 @@ const ProductPage = ({ params }) => {
         <strong>Price:</strong> ${product.price}
       </p>
       <p>{product.description}</p>
+
+      {color && (
+        <p>
+          <strong>Color:</strong> {color}
+        </p>
+      )}
+      {ram && (
+        <p>
+          <strong>RAM:</strong> {ram}
+        </p>
+      )}
 
       <h3>Specifications:</h3>
       <ul>
