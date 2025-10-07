@@ -6,6 +6,8 @@ import { allProducts } from './allProducts'
 
 export default function ProductFilter() {
   const searchParams = useSearchParams()
+  console.log("searchParams",searchParams);
+  
   const router = useRouter()
 
   const category = searchParams.get('category') || 'all'
@@ -15,6 +17,8 @@ export default function ProductFilter() {
   const search = searchParams.get('search') || ''
 
   const filteredProducts = allProducts.filter(product => {
+    console.log("getallproduct",product);
+    
     if (category !== 'all' && product.category !== category) return false
     if (brand !== 'all' && product.brand !== brand) return false
     if (product.price < Number(minPrice)) return false
@@ -25,6 +29,9 @@ export default function ProductFilter() {
 
   const updateFilter = (key, value) => {
     const params = new URLSearchParams(searchParams)
+    console.log(key,value,"paramsparams",params);
+    
+    // URLSearchParams allows you to read, modify, add, or remove query parameters from a URL. it is note for you reetu
     if (value === 'all' || value === '' || value === '0') {
       params.delete(key)
     } else {
@@ -36,6 +43,8 @@ export default function ProductFilter() {
   const clearFilters = () => router.push('?')
   const brands = [...new Set(allProducts.map(p => p.brand))]
 
+  console.log("brandsbrands",brands);
+  
   return (
     <div className={styles.container}>
       <div className={styles.maxContainer}>
