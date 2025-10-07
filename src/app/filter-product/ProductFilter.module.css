@@ -1,0 +1,140 @@
+.container {
+  min-height: 100vh;
+  padding: 32px;
+  background-color: #f9fafb;
+}
+
+.maxContainer {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #1f2937;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.gridLarge {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.sidebar {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 32px;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.buttonClear {
+  font-size: 0.875rem;
+  color: #2563eb;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
+}
+
+.select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
+}
+
+.priceInput {
+  width: 50%;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
+}
+
+.productCard {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 24px;
+  transition: box-shadow 0.3s;
+}
+
+.productCategory {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #dbeafe;
+  color: #1e3a8a;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  margin-bottom: 8px;
+}
+
+.productName {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.productBrand {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 12px;
+}
+
+.productPrice {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.addToCartButton {
+  margin-top: 16px;
+  width: 100%;
+  padding: 8px 16px;
+  background-color: #2563eb;
+  color: #fff;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.noProducts {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 48px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.filterInfo {
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
