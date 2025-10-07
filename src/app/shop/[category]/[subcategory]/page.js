@@ -1,12 +1,11 @@
 "use client";
 import { use } from "react";
-import { macbookProducts } from "../../shopCategories";
 import Link from "next/link";
+import { macbookProducts } from "../../shopCategories";
 
 const SubcategoryPage = ({ params: paramsPromise }) => {
   const { category, subcategory } = use(paramsPromise);
 
-  // For now, we only have 'laptops' subcategory for MacBooks
   const filteredProducts =
     subcategory === "laptops" ? macbookProducts : [];
 
@@ -16,6 +15,7 @@ const SubcategoryPage = ({ params: paramsPromise }) => {
   return (
     <div style={{ padding: "30px" }}>
       <h1>{subcategory.toUpperCase()}</h1>
+
       <div
         style={{
           display: "grid",
@@ -27,7 +27,7 @@ const SubcategoryPage = ({ params: paramsPromise }) => {
         {filteredProducts.map((product) => (
           <Link
             key={product.id}
-            href={`/shop/${category}/${subcategory}/${product.id}`} // optional for future product page
+            href={`/shop/${category}/${subcategory}/${product.id}?color=silver&storage=512GB`}
             style={{
               border: "1px solid #ddd",
               borderRadius: "10px",

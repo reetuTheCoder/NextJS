@@ -50,7 +50,8 @@ export const macbookProducts = [
       "Ultra-light and portable",
       "Up to 18 hours battery life",
     ],
-    description: "MacBook Air is perfect for everyday computing with excellent performance and portability.",
+    description:
+      "MacBook Air is perfect for everyday computing with excellent performance and portability.",
     specifications: {
       RAM: "8GB",
       Storage: "256GB SSD",
@@ -71,7 +72,8 @@ export const macbookProducts = [
       "Powerful graphics for creators",
       "Up to 20 hours battery life",
     ],
-    description: "MacBook Pro 15 is designed for professionals who need power and speed for demanding tasks.",
+    description:
+      "MacBook Pro 15 is designed for professionals who need power and speed for demanding tasks.",
     specifications: {
       RAM: "16GB",
       Storage: "512GB SSD",
@@ -92,7 +94,8 @@ export const macbookProducts = [
       "Ideal for video and 3D editing",
       "Up to 21 hours battery life",
     ],
-    description: "MacBook Pro 16 is the ultimate machine for creatives and professionals needing top performance.",
+    description:
+      "MacBook Pro 16 is the ultimate machine for creatives and professionals needing top performance.",
     specifications: {
       RAM: "32GB",
       Storage: "1TB SSD",
