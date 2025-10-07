@@ -4,10 +4,14 @@ import { products } from "../shopCategories";
 import { use } from "react";
 
 const CategoryPage = ({ params: paramsPromise }) => {
+  console.log("params: paramsPromise ",paramsPromise );
+  
   const { category } = use(paramsPromise);
 
   // Filter products by category
   const categoryProducts = products.filter((p) => p.category === category);
+
+    console.log("categoryProducts ",categoryProducts );
 
   if (categoryProducts.length === 0)
     return <p style={{ padding: "30px" }}>No products in this category.</p>;
@@ -28,8 +32,8 @@ const CategoryPage = ({ params: paramsPromise }) => {
             key={product.id}
             href={
               product.id === "prod4"
-                ? `/shop/${category}/laptops` // MacBook goes to subcategory page
-                : `/shop/${category}` // Other products stay on category page (or link to product details later)
+                ? `/shop/${category}/laptops` 
+                : `/shop/${category}` 
             }
             style={{
               border: "1px solid #ddd",

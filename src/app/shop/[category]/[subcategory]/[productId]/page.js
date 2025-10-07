@@ -19,14 +19,13 @@ const ProductDetailsPage = ({ params: paramsPromise }) => {
       <h1 style={{ fontSize: "2rem", marginBottom: "20px" }}>{product.name}</h1>
 
       <div style={{ display: "flex", gap: "40px", flexWrap: "wrap" }}>
-        {/* Product Image */}
         <img
           src={product.image}
           alt={product.name}
           style={{ width: "300px", borderRadius: "10px" }}
         />
 
-        {/* Product Info */}
+
         <div style={{ flex: 1, minWidth: "250px" }}>
           <p><strong>Category:</strong> {product.category}</p>
           <p><strong>Subcategory:</strong> {product.subcategory}</p>
@@ -51,7 +50,6 @@ const ProductDetailsPage = ({ params: paramsPromise }) => {
             Add to Cart
           </button>
 
-          {/* ✅ Features Section */}
           {product.features && product.features.length > 0 && (
             <div style={{ marginTop: "20px" }}>
               <h3>Features:</h3>
@@ -63,7 +61,6 @@ const ProductDetailsPage = ({ params: paramsPromise }) => {
             </div>
           )}
 
-          {/* ✅ Specifications Section */}
           {product.specifications && (
             <div style={{ marginTop: "20px" }}>
               <h3>Specifications:</h3>
